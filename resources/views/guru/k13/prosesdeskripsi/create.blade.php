@@ -66,8 +66,8 @@
                           <tr>
                             <th rowspan="2" class="text-center" style="width: 75px;">No</th>
                             <th rowspan="2" class="text-center">Nama Siswa</th>
-                            <th colspan="2" class="text-center">Nilai Pengetahuan</th>
-                            <th colspan="2" class="text-center">Nilai Keterampilan</th>
+                            <th colspan="2" class="text-center">Nilai Formatif</th>
+                            <th colspan="2" class="text-center">Nilai Sumatif</th>
                           </tr>
                           <tr>
                             <th class="text-center" style="width: 50px;">Nilai</th>
@@ -90,26 +90,26 @@
                             <td class="text-center">{{$nilai_siswa->nilai_pengetahuan}}</td>
                             <td>
                               @if($nilai_siswa->predikat_pengetahuan == 'D' )
-                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi pengetahuan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan pengetahuan kurang baik, terutama {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi formatif harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan pengetahuan kurang baik, terutama {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
                               @elseif($nilai_siswa->predikat_pengetahuan == 'C')
-                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi pengetahuan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan pengetahuan cukup baik, terutama {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi formatif harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan pengetahuan cukup baik, terutama {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
                               @elseif($nilai_siswa->predikat_pengetahuan == 'B')
-                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi pengetahuan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan pengetahuan baik, terutama dalam {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi pengetahuan harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan formatif baik, terutama dalam {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
                               @elseif($nilai_siswa->predikat_pengetahuan == 'A')
-                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi pengetahuan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan pengetahuan sangat baik, terutama dalam {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_pengetahuan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi pengetahuan harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan pengetahuan sangat baik, terutama dalam {{$nilai_siswa->deskripsi_pengetahuan}}</textarea>
                               @endif
                             </td>
 
                             <td class="text-center">{{$nilai_siswa->nilai_keterampilan}}</td>
                             <td>
                               @if($nilai_siswa->predikat_keterampilan == 'D' )
-                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi keterampilan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan keterampilan kurang baik, terutama {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi Sumatif harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan Sumatif kurang baik, terutama {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
                               @elseif($nilai_siswa->predikat_keterampilan == 'C')
-                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi keterampilan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan keterampilan cukup baik, terutama {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi Sumatif harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan Sumatif cukup baik, terutama {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
                               @elseif($nilai_siswa->predikat_keterampilan == 'B')
-                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi keterampilan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan keterampilan baik, terutama dalam {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi Sumatif harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan Sumatif baik, terutama dalam {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
                               @elseif($nilai_siswa->predikat_keterampilan == 'A')
-                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="30" maxlength="200" required oninvalid="this.setCustomValidity('Capaian Kompetensi keterampilan harus berisi antara 30 s/d 200 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan keterampilan sangat baik, terutama dalam {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
+                              <textarea class="form-control" name="deskripsi_keterampilan[]" rows="4" minlength="10" maxlength="300" required oninvalid="this.setCustomValidity('Capaian Kompetensi Sumatif harus berisi antara 10 s/d 300 karekter')" oninput="setCustomValidity('')">Memiliki penguasaan Sumatif sangat baik, terutama dalam {{$nilai_siswa->deskripsi_keterampilan}}</textarea>
                               @endif
                             </td>
 

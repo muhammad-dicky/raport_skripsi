@@ -73,8 +73,11 @@ class KirimNilaiAkhirController extends Controller
             $rencana_nilai_spiritual = K13RencanaNilaiSpiritual::where('pembelajaran_id', $pembelajaran->id)->get('id');
             $rencana_nilai_sosial = K13RencanaNilaiSosial::where('pembelajaran_id', $pembelajaran->id)->get('id');
 
-            if (count($rencana_nilai_pengetahuan) == 0 || count($rencana_nilai_keterampilan) == 0 || count($rencana_nilai_spiritual) == 0 || count($rencana_nilai_sosial) == 0) {
-                return back()->with('toast_warning', 'Data rencana penilaian tidak ditemukan');
+            // backup nilai akhir raport
+            // if (count($rencana_nilai_pengetahuan) == 0 || count($rencana_nilai_keterampilan) == 0 || count($rencana_nilai_spiritual) == 0 || count($rencana_nilai_sosial) == 0)
+
+            if (count($rencana_nilai_pengetahuan) == 0 || count($rencana_nilai_keterampilan) == 0) {
+                return back()->with('toast_warning', 'Data rencana penilaian formatif/sumatif tidak ditemukan');
             } else {
                 $nilai_pengetahuan = K13NilaiPengetahuan::whereIn('k13_rencana_nilai_pengetahuan_id', $rencana_nilai_pengetahuan)->groupBy('k13_rencana_nilai_pengetahuan_id')->get();
                 $nilai_keterampilan = K13NilaiKeterampilan::whereIn('k13_rencana_nilai_keterampilan_id', $rencana_nilai_keterampilan)->groupBy('k13_rencana_nilai_keterampilan_id')->get();
@@ -108,7 +111,7 @@ class KirimNilaiAkhirController extends Controller
                         $data_anggota_kelas = AnggotaKelas::where('kelas_id', $pembelajaran->kelas_id)->get();
                         foreach ($data_anggota_kelas as $anggota_kelas) {
 
-                            // Olah Nilai Pengetahuan
+                            // Olah Nilai Formatif
                             $data_nilai_pengetahuan = K13NilaiPengetahuan::whereIn('k13_rencana_nilai_pengetahuan_id', $rencana_nilai_pengetahuan)->where('anggota_kelas_id', $anggota_kelas->id)->get();
                             foreach ($data_nilai_pengetahuan as $nilai) {
                                 $bobot = K13RencanaNilaiPengetahuan::findorfail($nilai->k13_rencana_nilai_pengetahuan_id);
@@ -121,8 +124,9 @@ class KirimNilaiAkhirController extends Controller
 
                             $rata_nilai_pengetahuan = $data_nilai_pengetahuan->sum('nilai_pengetahuan') / $data_nilai_pengetahuan->sum('bobot_penilaian');
                             $nilai_akhir_pengetahuan = (($rata_nilai_pengetahuan * $rencana_bobot_penilaian->bobot_ph) + ($nilai_pts_pas->nilai_pts * $rencana_bobot_penilaian->bobot_pts) + ($nilai_pts_pas->nilai_pas * $rencana_bobot_penilaian->bobot_pas)) / ($rencana_bobot_penilaian->bobot_ph + $rencana_bobot_penilaian->bobot_pts + $rencana_bobot_penilaian->bobot_pas);
-                            // Akhir Olah Nilai Pengetahuan
+                            // Akhir Olah Nilai Formatif
 
+                            // Perhitungan Nilai Sumatif
                             $nilai_keterampilan = K13NilaiKeterampilan::whereIn('k13_rencana_nilai_keterampilan_id', $rencana_nilai_keterampilan)->where('anggota_kelas_id', $anggota_kelas->id)->avg('nilai');
                             $nilai_spiritual = K13NilaiSpiritual::whereIn('k13_rencana_nilai_spiritual_id', $rencana_nilai_spiritual)->where('anggota_kelas_id', $anggota_kelas->id)->avg('nilai');
                             $nilai_sosial = K13NilaiSosial::whereIn('k13_rencana_nilai_sosial_id', $rencana_nilai_sosial)->where('anggota_kelas_id', $anggota_kelas->id)->avg('nilai');

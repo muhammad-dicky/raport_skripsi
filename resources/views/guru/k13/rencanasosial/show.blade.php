@@ -13,7 +13,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item "><a href="{{ route('rencanasosial.index') }}">Rencana KD/Butir Sosial</a></li>
+            <li class="breadcrumb-item "><a href="{{ route('rencanasosial.index') }}">Rencana TP/Butir Sosial</a></li>
             <li class="breadcrumb-item active">{{$title}}</li>
           </ol>
         </div><!-- /.col -->
@@ -48,7 +48,7 @@
                   <thead class="bg-primary">
                     <tr>
                       <th class="text-center" style="width: 100px;">No</th>
-                      <th class="text-center">KD/Butir Sosial</th>
+                      <th class="text-center">TP/Butir Sosial</th>
                     </tr>
                   </thead>
                   <tbody>

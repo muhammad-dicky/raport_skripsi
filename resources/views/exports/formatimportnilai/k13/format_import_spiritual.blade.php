@@ -73,7 +73,7 @@
           <strong>NAMA SISWA</strong>
         </td>
         <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;">
-          <strong>NO. KD</strong>
+          <strong>NO. TP</strong>
         </td>
         <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;">
           <strong>NILAI</strong>
@@ -99,7 +99,7 @@
           {{$anggota_kelas->siswa->nama_lengkap}}
         </td>
         <td align="center" style="border: 1px solid #000000; background-color: #e0eda4;">
-          KD : {{$rencana_penilaian->k13_butir_sikap->kode}}
+          TP : {{$rencana_penilaian->k13_butir_sikap->kode}}
         </td>
         <td align="center" style="border: 1px solid #000000; background-color: #e0eda4;">
         </td>
@@ -119,7 +119,7 @@
           {{$anggota_kelas->siswa->nama_lengkap}}
         </td>
         <td align="center" style="border: 1px solid #000000;">
-          KD : {{$rencana_penilaian->k13_butir_sikap->kode}}
+          TP : {{$rencana_penilaian->k13_butir_sikap->kode}}
         </td>
         <td align="center" style="border: 1px solid #000000;">
         </td>

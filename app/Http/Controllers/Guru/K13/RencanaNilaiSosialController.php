@@ -23,7 +23,7 @@ class RencanaNilaiSosialController extends Controller
      */
     public function index()
     {
-        $title = 'Rencana KD/Butir Sosial';
+        $title = 'Rencana TP/Butir Sosial';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
 
         $guru = Guru::where('user_id', Auth::user()->id)->first();
@@ -45,7 +45,7 @@ class RencanaNilaiSosialController extends Controller
      */
     public function create(Request $request)
     {
-        $title = 'Pilih KD/Butir Sosial';
+        $title = 'Pilih TP/Butir Sosial';
 
         $pembelajaran = Pembelajaran::findorfail($request->pembelajaran_id);
         $data_sikap = K13ButirSikap::where('jenis_kompetensi', 2)->orderBy('kode', 'ASC')->get();
@@ -93,7 +93,7 @@ class RencanaNilaiSosialController extends Controller
      */
     public function show($id)
     {
-        $title = 'Data KD/Butir Sosial';
+        $title = 'Data TP/Butir Sosial';
         $pembelajaran = Pembelajaran::findorfail($id);
         $data_rencana_penilaian = K13RencanaNilaiSosial::where('pembelajaran_id', $id)->orderBy('k13_butir_sikap_id', 'ASC')->get();
         return view('guru.k13.rencanasosial.show', compact('title', 'pembelajaran', 'data_rencana_penilaian'));
@@ -107,7 +107,7 @@ class RencanaNilaiSosialController extends Controller
      */
     public function edit($id)
     {
-        $title = 'Edit KD/Butir Sosial';
+        $title = 'Edit TP/Butir Sosial';
         $pembelajaran = Pembelajaran::findorfail($id);
         $data_sikap = K13ButirSikap::where('jenis_kompetensi', 2)->orderBy('kode', 'ASC')->get();
 

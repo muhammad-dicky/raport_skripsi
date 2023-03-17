@@ -23,7 +23,7 @@ class KdMapelController extends Controller
      */
     public function index()
     {
-        $title = 'Data Kompetensi Dasar';
+        $title = 'Data Tujuan Pembelajaran';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
 
         $guru = Guru::where('user_id', Auth::user()->id)->first();
@@ -54,7 +54,7 @@ class KdMapelController extends Controller
         if ($validator->fails()) {
             return back()->with('toast_error', $validator->messages()->all()[0])->withInput();
         } else {
-            $title = 'Tambah Kompetensi Dasar';
+            $title = 'Tambah Tujuan Pembelajaran';
             $mapel_id = $request->mapel_id;
             $tingkatan_kelas = $request->tingkatan_kelas;
 
@@ -84,7 +84,7 @@ class KdMapelController extends Controller
             'jenis_kompetensi.*' => 'required',
             'kode_kd.*' => 'required|min:2|max:10',
             'kompetensi_dasar.*' => 'required|min:10|max:255',
-            'ringkasan_kompetensi.*' => 'required|min:10|max:150',
+            'ringkasan_kompetensi.*' => 'required|min:10|max:255',
         ]);
         if ($validator->fails()) {
             return back()->with('toast_error', $validator->messages()->all()[0])->withInput();
@@ -104,7 +104,7 @@ class KdMapelController extends Controller
                 $store_data_kd[] = $data_kd;
             }
             K13KdMapel::insert($store_data_kd);
-            return redirect('guru/kdk13')->with('toast_success', 'Kompetensi dasar berhasil ditambahkan');
+            return redirect('guru/kdk13')->with('toast_success', 'Tujuan Pembelajaran berhasil ditambahkan');
         }
     }
 
@@ -130,7 +130,7 @@ class KdMapelController extends Controller
                 'ringkasan_kompetensi' => $request->ringkasan_kompetensi,
             ];
             $kd->update($data_kd);
-            return back()->with('toast_success', 'Kompetensi dasar berhasil diedit');
+            return back()->with('toast_success', 'Tujuan Pembelajaran berhasil diedit');
         }
     }
 
@@ -145,9 +145,9 @@ class KdMapelController extends Controller
         $kd = K13KdMapel::findorfail($id);
         try {
             $kd->delete();
-            return back()->with('toast_success', 'Kompetensi dasar berhasil dihapus');
+            return back()->with('toast_success', 'Tujuan Pembelajaran berhasil dihapus');
         } catch (\Throwable $th) {
-            return back()->with('toast_error', 'Data Kompetensi dasar tidak dapat dihapus');
+            return back()->with('toast_error', 'Data Tujuan Pembelajaran tidak dapat dihapus');
         }
     }
 }

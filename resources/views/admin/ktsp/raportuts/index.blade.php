@@ -95,7 +95,7 @@
                           <input type="hidden" name="paper_size" value="{{$paper_size}}">
                           <input type="hidden" name="orientation" value="{{$orientation}}">
                           <button type="submit" class="btn btn-primary btn-sm">
-                            <i class="fas fa-print"></i> Raport UTS
+                            <i class="fas fa-print"></i> Raport SUMATIF TENGAH SEMESTER
                           </button>
                         </form>
                       </td>

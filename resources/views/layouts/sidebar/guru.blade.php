@@ -23,12 +23,12 @@
         @if(Session::get('kurikulum') == '2013')
 
         <!-- Kurikulum 2013 -->
-        <li class="nav-header">RAPORT K-2013</li>
+        <li class="nav-header">RAPORT MERDEKA BELAJAR</li>
         <li class="nav-item">
           <a href="{{ route('kdk13.index') }}" class="nav-link">
             <i class="nav-icon fas fa-clipboard-list"></i>
             <p>
-              Data Kompetensi Dasar
+              Data Tujuan Pembelajaran
             </p>
           </a>
         </li>
@@ -44,25 +44,25 @@
             <li class="nav-item">
               <a href="{{ route('rencanapengetahuan.index') }}" class="nav-link">
                 <i class="fas fa-check-circle nav-icon"></i>
-                <p>Nilai Pengetahuan</p>
+                <p>Nilai Formatif</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('rencanaketerampilan.index') }}" class="nav-link">
                 <i class="fas fa-check-circle nav-icon"></i>
-                <p>Nilai Keterampilan</p>
+                <p>Nilai Sumatif</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('rencanaspiritual.index') }}" class="nav-link">
                 <i class="fas fa-check-circle nav-icon"></i>
-                <p>Pilih KD/Butir Spiritual </p>
+                <p>Pilih TP/Butir Spiritual </p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('rencanasosial.index') }}" class="nav-link">
                 <i class="fas fa-check-circle nav-icon"></i>
-                <p>Pilih KD/Butir Sosial </p>
+                <p>Pilih TP/Butir Sosial </p>
               </a>
             </li>
             <li class="nav-item">
@@ -86,13 +86,13 @@
             <li class="nav-item">
               <a href="{{ route('nilaipengetahuan.index') }}" class="nav-link">
                 <i class="fas fa-edit nav-icon"></i>
-                <p>Nilai Pengetahuan</p>
+                <p>Nilai Formatif</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="{{ route('nilaiketerampilan.index') }}" class="nav-link">
                 <i class="fas fa-edit nav-icon"></i>
-                <p>Nilai Keterampilan</p>
+                <p>Nilai Sumatif</p>
               </a>
             </li>
             <li class="nav-item">
@@ -153,7 +153,7 @@
           <a href="{{ route('prosesdeskripsi.index') }}" class="nav-link">
             <i class="nav-icon fas fa-file-alt"></i>
             <p>
-              Proses Capaian Kompetensi Siswa
+              Deskripsi Nilai Akhir
             </p>
           </a>
         </li>
@@ -165,7 +165,7 @@
         @elseif(Session::get('kurikulum') == '2006')
 
         <!-- Kurikulum 2006 -->
-        <li class="nav-header">RAPORT KURIKULUM 2006</li>
+        <li class="nav-header">RAPORT KURIKULUM MERDEKA</li>
         <li class="nav-item">
           <a href="{{ route('bobot.index') }}" class="nav-link">
             <i class="nav-icon fas fa-balance-scale"></i>

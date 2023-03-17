@@ -1,6 +1,9 @@
 @include('layouts.main.header')
 @include('layouts.sidebar.guru')
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+
 <!-- Content Wrapper. Contains page content -->
 <div class="content-wrapper">
   <!-- Content Header (Page header) -->
@@ -51,6 +54,7 @@
                       <tr>
                         <th class="text-center" style="width: 5%;">No</th>
                         <th class="text-center">Nama Siswa</th>
+                        {{-- <th class="text-center">SUMATIF 1</th> --}}
                         <th class="text-center">Rata-Rata Nilai SUMATIF</th>
                       </tr>
                     </thead>
@@ -63,9 +67,32 @@
                         <td>{{$nilai_uh->anggota_kelas->siswa->nama_lengkap}}</td>
                         <input type="hidden" name="anggota_kelas_id[]" value="{{$nilai_uh->anggota_kelas_id}}">
 
+
+                      <div class="control-group after-add-more">
                         <td>
                           <input type="number" class="form-control" name="nilai[]" value="{{$nilai_uh->nilai}}" min="0" max="100" required oninvalid="this.setCustomValidity('Nilai harus berisi antara 0 s/d 100')" oninput="setCustomValidity('')">
                         </td>
+
+                        {{-- batas atas --}}
+                        <button class="btn btn-success add-more" type="button">
+                          <i class="glyphicon glyphicon-plus"></i> Add
+                        </button>
+                        <td>
+
+                        <div class="copy hide">
+                        <div class="control-group">
+                       
+                          <input type="number" class="form-control" name="nilai[]" value="{{$nilai_uh->nilai}}" min="0" max="100" >
+                        
+                       
+                        
+                        <button class="btn btn-danger remove" type="button"><i class="glyphicon glyphicon-remove"></i> Remove</button>
+              <hr>
+            </div>
+          </div>
+        </div>
+      </td>
+            {{-- batas bawah --}}
 
                       </tr>
                       @endforeach
@@ -93,7 +120,19 @@
 <!-- /.content-wrapper -->
 
 @include('layouts.main.footer')
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".add-more").click(function(){ 
+        var html = $(".copy").html();
+        $(".after-add-more").after(html);
+    });
 
+    // saat tombol remove dklik control group akan dihapus 
+    $("body").on("click",".remove",function(){ 
+        $(this).parents(".control-group").remove();
+    });
+  });
+</script>
 </body>
 
 </html>

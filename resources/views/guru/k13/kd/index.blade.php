@@ -42,7 +42,7 @@
               <div class="modal-dialog modal-lg">
                 <div class="modal-content">
                   <div class="modal-header">
-                    <h5 class="modal-title">Tambah Kompetensi Dasar</h5>
+                    <h5 class="modal-title">Tambah Tujuan Pembelajaran</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                       <span aria-hidden="true">&times;</span>
                     </button>
@@ -90,7 +90,7 @@
                       <th>Tingkatan Kelas</th>
                       <th>Semester</th>
                       <th>Kode</th>
-                      <th>Kompetensi Dasar</th>
+                      <th>Tujuan Pembelajaran</th>
                       <th>Aksi</th>
                     </tr>
                   </thead>
@@ -98,18 +98,16 @@
                     <?php $no = 0; ?>
                     @foreach($data_kd as $kd)
                     <?php $no++; ?>
-                    <tr>
-                      <td>{{$no}}</td>
-                      <td>{{$kd->mapel->nama_mapel}}</td>
+                  
                       <td>
                         @if($kd->jenis_kompetensi == 1)
                         Spiritual
                         @elseif($kd->jenis_kompetensi == 2)
                         Sosial
                         @elseif($kd->jenis_kompetensi == 3)
-                        Pengetahuan
+                        Formatif
                         @elseif($kd->jenis_kompetensi == 4)
-                        Keterampilan
+                        Sumatif
                         @endif
                       </td>
                       <td>{{$kd->tingkatan_kelas}}</td>
@@ -163,7 +161,7 @@
                                 </div>
                               </div>
                               <div class="form-group row">
-                                <label for="kompetensi_dasar" class="col-sm-3 col-form-label">Kompetensi Dasar</label>
+                                <label for="kompetensi_dasar" class="col-sm-3 col-form-label">Tujuan Pembelajaran</label>
                                 <div class="col-sm-9">
                                   <textarea name="kompetensi_dasar" class="form-control" rows="2">{{$kd->kompetensi_dasar}}</textarea>
                                 </div>

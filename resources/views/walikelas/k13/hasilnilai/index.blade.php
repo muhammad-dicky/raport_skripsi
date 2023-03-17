@@ -97,7 +97,7 @@
                                 <!-- Tabel Nilai  -->
                                 <div class="row mt-3">
                                   <div class="col-sm-12">
-                                    <strong>NILAI AKHIR SEMESTER PENGETAHUAN DAN KETERAMPILAN</strong>
+                                    <strong>NILAI AKHIR SEMESTER FORMATIF DAN SUMATIF</strong>
                                   </div>
                                 </div>
                                 <div class="row">
@@ -109,8 +109,8 @@
                                             <th class="text-center" rowspan="2" style="width: 5%;">No</th>
                                             <th class="text-center" rowspan="2" style="width: 50%;">Mata Pelajaran</th>
                                             <th class="text-center" rowspan="2" style="width: 5%;">KKTP</th>
-                                            <th class="text-center" colspan="2" style="width: 20%;">Pengetahuan</th>
-                                            <th class="text-center" colspan="2" style="width: 20%;">Keterampilan</th>
+                                            <th class="text-center" colspan="2" style="width: 20%;">Formatif</th>
+                                            <th class="text-center" colspan="2" style="width: 20%;">Sumatif</th>
                                           </tr>
                                           <tr>
                                             <th class="text-center">Nilai</th>

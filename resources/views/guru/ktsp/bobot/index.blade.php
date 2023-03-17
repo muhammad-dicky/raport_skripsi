@@ -44,10 +44,10 @@
                       <th rowspan="2" class="text-center" style="width: 100px;">Aksi</th>
                     </tr>
                     <tr>
-                      <th class="text-center" style="width: 100px;">TUGAS</th>
-                      <th class="text-center" style="width: 100px;">UH</th>
-                      <th class="text-center" style="width: 100px;">UTS</th>
-                      <th class="text-center" style="width: 100px;">UAS</th>
+                      <th class="text-center" style="width: 100px;">FORMATIF</th>
+                      <th class="text-center" style="width: 100px;">SUMATIF</th>
+                      <th class="text-center" style="width: 100px;">SUMATIF TENGAH SEMESTER</th>
+                      <th class="text-center" style="width: 100px;">SUMATIF AKHIR SEMESTER</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -110,25 +110,25 @@
                                 <div class="row">
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Tugas</label>
+                                      <label>Formatif</label>
                                       <input type="number" class="form-control" name="bobot_tugas" value="0">
                                     </div>
                                   </div>
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Ulangan Harian (UH)</label>
+                                      <label>Sumatif</label>
                                       <input type="number" class="form-control" name="bobot_uh" value="0">
                                     </div>
                                   </div>
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Ulangan Tengah Semester (UTS)</label>
+                                      <label>Sumatif Tengah Semester (STS)</label>
                                       <input type="number" class="form-control" name="bobot_uts" value="0">
                                     </div>
                                   </div>
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Ulangan Akhir Semester (UAS)</label>
+                                      <label>Sumatif Akhir Semester (SAS)</label>
                                       <input type="number" class="form-control" name="bobot_uas" value="1">
                                     </div>
                                   </div>
@@ -170,25 +170,25 @@
                                 <div class="row">
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Tugas</label>
+                                      <label>Formatif</label>
                                       <input type="number" class="form-control" name="bobot_tugas" value="{{$bobot_nilai->bobot_tugas}}">
                                     </div>
                                   </div>
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Ulangan Harian (UH)</label>
+                                      <label>Sumatif</label>
                                       <input type="number" class="form-control" name="bobot_uh" value="{{$bobot_nilai->bobot_uh}}">
                                     </div>
                                   </div>
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Ulangan Tengah Semester (UTS)</label>
+                                      <label>Sumatif Tengah Semester (STS)</label>
                                       <input type="number" class="form-control" name="bobot_uts" value="{{$bobot_nilai->bobot_uts}}">
                                     </div>
                                   </div>
                                   <div class="col-sm-3">
                                     <div class="form-group">
-                                      <label>Ulangan Akhir Semester (UAS)</label>
+                                      <label>Sumatif Akhir Semester (SAS)</label>
                                       <input type="number" class="form-control" name="bobot_uas" value="{{$bobot_nilai->bobot_uas}}">
                                     </div>
                                   </div>

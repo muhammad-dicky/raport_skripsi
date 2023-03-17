@@ -60,7 +60,7 @@ class CetakRaportUTSController extends Controller
      */
     public function show(Request $request, $id)
     {
-        $title = 'Raport UTS';
+        $title = 'Raport SUMATIF TENGAH SEMESTER';
         $sekolah = Sekolah::first();
         $anggota_kelas = AnggotaKelas::findorfail($id);
 
@@ -162,6 +162,6 @@ class CetakRaportUTSController extends Controller
             }
         }
         $raport = PDF::loadview('walikelas.ktsp.raportuts.raport', compact('title', 'sekolah', 'anggota_kelas', 'data_pembelajaran_wajib', 'data_pembelajaran_pilihan', 'data_pembelajaran_muatan_lokal'))->setPaper($request->paper_size, $request->orientation);
-        return $raport->stream('RAPORT UTS ' . $anggota_kelas->siswa->nama_lengkap . ' (' . $anggota_kelas->kelas->nama_kelas . ').pdf');
+        return $raport->stream('RAPORT SUMATIF TENGAH SEMESTER ' . $anggota_kelas->siswa->nama_lengkap . ' (' . $anggota_kelas->kelas->nama_kelas . ').pdf');
     }
 }

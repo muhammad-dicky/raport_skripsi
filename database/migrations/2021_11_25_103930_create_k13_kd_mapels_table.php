@@ -29,7 +29,7 @@ class CreateK13KdMapelsTable extends Migration
             // Jenis Kompetensi
             // 1 = Sikap Spiritual
             // 2 = Sikap Sosial 
-            // 3 = Pengetahuan
+            // 3 = Formatif
             // 4 = Keterampilan
         });
     }

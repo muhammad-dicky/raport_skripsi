@@ -62,13 +62,13 @@
                       <th colspan="2" class="text-center" style="width: 100px;">Status Nilai Raport</th>
                     </tr>
                     <tr>
-                      <th class="text-center" style="width: 50px;">Peng</th>
-                      <th class="text-center" style="width: 50px;">Ket</th>
+                      <th class="text-center" style="width: 50px;">Formatif</th>
+                      <th class="text-center" style="width: 50px;">Sumatif</th>
                       <th class="text-center" style="width: 50px;">Skp Sprt</th>
                       <th class="text-center" style="width: 50px;">Skp Sosial</th>
 
-                      <th class="text-center" style="width: 50px;">Peng</th>
-                      <th class="text-center" style="width: 50px;">Ket</th>
+                      <th class="text-center" style="width: 50px;">Formatif</th>
+                      <th class="text-center" style="width: 50px;">Sumatif</th>
                       <th class="text-center" style="width: 50px;">Skp Sprt</th>
                       <th class="text-center" style="width: 50px;">Skp Sosial</th>
 

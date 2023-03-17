@@ -36,7 +36,7 @@
           <strong>Kurikulum </strong>
         </td>
         <td colspan="3">
-          <strong>: MERDEKA 2006 </strong>
+          <strong>: MERDEKA </strong>
         </td>
       </tr>
 

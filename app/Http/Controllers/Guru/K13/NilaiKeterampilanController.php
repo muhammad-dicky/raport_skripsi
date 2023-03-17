@@ -27,7 +27,7 @@ class NilaiKeterampilanController extends Controller
      */
     public function index()
     {
-        $title = 'Nilai Keterampilan';
+        $title = 'Nilai Sumatif';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
 
         $guru = Guru::where('user_id', Auth::user()->id)->first();
@@ -75,14 +75,14 @@ class NilaiKeterampilanController extends Controller
             if ($count_kd_nilai == 0) {
                 $data_rencana_penilaian = K13RencanaNilaiKeterampilan::where('pembelajaran_id', $request->pembelajaran_id)->where('kode_penilaian', $kode_penilaian)->get();
                 $count_kd = count($data_rencana_penilaian);
-                $title = 'Input Nilai Keterampilan';
+                $title = 'Input Nilai Sumatif';
                 return view('guru.k13.nilaiketerampilan.create', compact('title', 'kode_penilaian', 'pembelajaran', 'data_anggota_kelas', 'data_rencana_penilaian', 'data_kode_penilaian', 'count_kd'));
             } else {
                 foreach ($data_anggota_kelas as $anggota_kelas) {
                     $data_nilai = K13NilaiKeterampilan::whereIn('k13_rencana_nilai_keterampilan_id', $id_data_rencana_penilaian)->where('anggota_kelas_id', $anggota_kelas->id)->get();
                     $anggota_kelas->data_nilai = $data_nilai;
                 }
-                $title = 'Edit Nilai Keterampilan';
+                $title = 'Edit Nilai Sumatif';
                 return view('guru.k13.nilaiketerampilan.edit', compact('title', 'kode_penilaian', 'pembelajaran', 'data_anggota_kelas', 'data_kode_penilaian', 'count_kd_nilai', 'data_kd_nilai'));
             }
         }
@@ -118,7 +118,7 @@ class NilaiKeterampilanController extends Controller
                 $store_data_penilaian = $data_penilaian_siswa;
             }
             K13NilaiKeterampilan::insert($store_data_penilaian);
-            return redirect('guru/nilaiketerampilan')->with('toast_success', 'Data nilai keterampilan berhasil disimpan.');
+            return redirect('guru/nilaiketerampilan')->with('toast_success', 'Data nilai Sumatif berhasil disimpan.');
         }
     }
 
@@ -146,7 +146,7 @@ class NilaiKeterampilanController extends Controller
                 }
             }
         }
-        return redirect('guru/nilaiketerampilan')->with('toast_success', 'Data nilai keterampilan berhasil edit.');
+        return redirect('guru/nilaiketerampilan')->with('toast_success', 'Data nilai Sumatif berhasil edit.');
     }
 
     public function format_import(Request $request)
@@ -166,7 +166,7 @@ class NilaiKeterampilanController extends Controller
     {
         try {
             Excel::import(new NilaiKeterampilanK13Import, $request->file('file_import'));
-            return back()->with('toast_success', 'Data nilai keterampilan berhasil diimport');
+            return back()->with('toast_success', 'Data nilai Sumatif berhasil diimport');
         } catch (\Throwable $th) {
             return back()->with('toast_error', 'Maaf, format data tidak sesuai');
         }

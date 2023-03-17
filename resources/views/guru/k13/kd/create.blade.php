@@ -13,7 +13,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item "><a href="{{ route('kdk13.index') }}">Data Kompetensi Dasar</a></li>
+            <li class="breadcrumb-item "><a href="{{ route('kdk13.index') }}">Data Tujuan Pembelajaran</a></li>
             <li class="breadcrumb-item active">{{$title}}</li>
           </ol>
         </div><!-- /.col -->
@@ -72,8 +72,8 @@
                     <thead>
                       <tr>
                         <th style="width: 250px;">Jenis Kompetensi</th>
-                        <th style="width: 100px;">Kode KD</th>
-                        <th>Kompetensi Dasar</th>
+                        <th style="width: 100px;">Kode TP</th>
+                        <th>Tujuan Pembelajaran</th>
                         <th>Ringkasan Kompetensi</th>
                         <th style="width: 40px;">Baris</th>
                       </tr>
@@ -117,10 +117,9 @@
       html += `<td>
                   <select class="form-control" name="jenis_kompetensi[]" style="width: 100%;" required oninvalid="this.setCustomValidity('silakan pilih item dalam daftar')" oninput="setCustomValidity('')">
                     <option value="">-- Pilih Kompetensi -- </option>
-                    <option value="1">Sikap Spiritual</option>
-                    <option value="2">Sikap Sosial</option>
-                    <option value="3">Pengetahuan</option>
-                    <option value="4">Keterampilan</option>
+                    <option value="4" >Sumatif</option>
+                    <option value="3" >Formatif</option>
+                    
                   </select>
               </td>`;
       html += `<td>
@@ -154,3 +153,11 @@
 
   });
 </script>
+
+
+{{-- backup baris 119
+<option value="">-- Pilih Kompetensi -- </option>
+<option value="1">Sikap Spiritual</option>
+<option value="2">Sikap Sosial</option>
+<option value="3" selected="selected" >Pengetahuan</option>
+<option value="4">Keterampilan</option> --}}

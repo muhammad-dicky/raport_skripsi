@@ -68,9 +68,9 @@
                       <th class="text-center" rowspan="2" style="width: 5%;">No</th>
                       <th class="text-center" rowspan="2" style="width: 5%;">NIS</th>
                       <th class="text-center" rowspan="2" style="width: 37%;">Nama Siswa</th>
-                      <th class="text-center" rowspan="2" style="width: 5%;">KKM</th>
-                      <th class="text-center" colspan="2" style="width: 12%;">Pengetahuan</th>
-                      <th class="text-center" colspan="2" style="width: 12%;">Keterampilan</th>
+                      <th class="text-center" rowspan="2" style="width: 5%;">KKTP</th>
+                      <th class="text-center" colspan="2" style="width: 12%;">Formatif</th>
+                      <th class="text-center" colspan="2" style="width: 12%;">Sumatif</th>
                       <th class="text-center" colspan="2" style="width: 12%;">Sikap Spiritual</th>
                       <th class="text-center" colspan="2" style="width: 12%;">Sikap Sosial</th>
                     </tr>

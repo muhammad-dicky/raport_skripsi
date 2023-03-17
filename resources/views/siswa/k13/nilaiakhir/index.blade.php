@@ -57,15 +57,15 @@
                       <th class="text-center" rowspan="2" style="width: 5%;">No</th>
                       <th class="text-center" rowspan="2" style="width: 28%;">Mata Pelajaran</th>
                       <th class="text-center" rowspan="2" style="width: 7%;">KKTP</th>
-                      <th class="text-center" colspan="2" style="width: 15%;">Pengetahuan</th>
-                      <th class="text-center" colspan="2" style="width: 15%;">Keterampilan</th>
+                      <th class="text-center" colspan="2" style="width: 15%;">Formatif</th>
+                      <th class="text-center" colspan="2" style="width: 15%;">Sumatif</th>
                       <th class="text-center" colspan="2" style="width: 15%;">Sikap Spiritual</th>
                       <th class="text-center" colspan="2" style="width: 15%;">Sikap Sosial</th>
                     </tr>
                     <tr>
                       <th class="text-center" style="width: 7%;">Nilai</th>
                       <th class="text-center" style="width: 8%;">Predikat</th>
-                      <th class="text-center" style="width: 7%;">Nilai</th>
+                      <th class="text-center" style="width: 7%;">NILAI AKHIR</th>
                       <th class="text-center" style="width: 8%;">Predikat</th>
                       <th class="text-center" style="width: 7%;">Nilai</th>
                       <th class="text-center" style="width: 8%;">Predikat</th>

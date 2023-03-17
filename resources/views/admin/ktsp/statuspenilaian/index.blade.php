@@ -65,7 +65,7 @@
                     <tr>
                       <th class="text-center" style="width: 50px;">Tugas</th>
                       <th class="text-center" style="width: 50px;">UH</th>
-                      <th class="text-center" style="width: 50px;">UTS</th>
+                      <th class="text-center" style="width: 50px;">STS</th>
                       <th class="text-center" style="width: 50px;">UAS</th>
 
                       <th class="text-center" style="width: 50px;">Kirim Nilai</th>

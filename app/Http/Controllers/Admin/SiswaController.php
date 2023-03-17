@@ -82,9 +82,20 @@ class SiswaController extends Controller
                     'status' => true
                 ]);
                 $user->save();
-            } catch (\Throwable $th) {
-                return back()->with('toast_error', 'Username telah digunakan');
+            } 
+            catch (\Throwable $th) {
+                return back()->with('toast_error', 'Username telah digunakan!');
             }
+            
+            // batas atas
+                // $user = new User([
+                //     'username' => strtolower(str_replace(' ', '', $request->nama_lengkap . $request->nis)),
+                //     'password' => bcrypt('123456'),
+                //     'role' => 3,
+                //     'status' => true
+                // ]);
+                // $user->save();
+        //    batas bawah
 
             $siswa = new Siswa([
                 'user_id' => $user->id,

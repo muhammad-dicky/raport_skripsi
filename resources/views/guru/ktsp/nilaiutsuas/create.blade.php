@@ -52,8 +52,8 @@
                       <tr>
                         <th class="text-center" style="width: 5%;">No</th>
                         <th class="text-center">Nama Siswa</th>
-                        <th class="text-center">Nilai UTS</th>
-                        <th class="text-center">Nilai UAS</th>
+                        <th class="text-center">Nilai STS</th>
+                        <th class="text-center">Nilai SAS</th>
                       </tr>
                     </thead>
                     <tbody>

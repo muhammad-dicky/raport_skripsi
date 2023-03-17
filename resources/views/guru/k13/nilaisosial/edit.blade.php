@@ -53,7 +53,7 @@
                       <tr>
                         <th rowspan="2" class="text-center" style="width: 100px;">No</th>
                         <th rowspan="2" class="text-center">Nama Siswa</th>
-                        <th colspan="{{$count_kd_nilai}}" class="text-center">Kompetensi Dasar / Indikator Sikap Sosial</th>
+                        <th colspan="{{$count_kd_nilai}}" class="text-center">Tujuan Pembelajaran / Indikator Sikap Sosial</th>
                       </tr>
                       <tr>
                         @foreach($data_kd_nilai as $kd_nilai)

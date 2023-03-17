@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>IMPORT UTS UAS KTSP</title>
+  <title>IMPORT SUMATIF TENGAH SEMSETER & AKHIR SEMESTER Merdeka Belajar</title>
 </head>
 
 <body>
@@ -12,7 +12,7 @@
     <thead>
       <tr>
         <td colspan="5" align="center">
-          <strong>FORMAT IMPORT NILAI UTS UAS</strong>
+          <strong>FORMAT IMPORT NILAI SUMATIF TENGAH SEMESTER & AKHIR SEMESTER</strong>
         </td>
       </tr>
       <tr>
@@ -36,7 +36,7 @@
           <strong>Kurikulum </strong>
         </td>
         <td colspan="4">
-          <strong>: MERDEKA 2006 </strong>
+          <strong>: MERDEKA </strong>
         </td>
       </tr>
 
@@ -73,10 +73,10 @@
           <strong>NAMA SISWA</strong>
         </td>
         <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;">
-          <strong>NILAI UTS</strong>
+          <strong>NILAI STS</strong>
         </td>
         <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;">
-          <strong>NILAI UAS</strong>
+          <strong>NILAI SAS</strong>
         </td>
       </tr>
 

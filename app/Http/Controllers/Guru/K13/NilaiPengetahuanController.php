@@ -27,7 +27,7 @@ class NilaiPengetahuanController extends Controller
      */
     public function index()
     {
-        $title = 'Nilai Pengetahuan';
+        $title = 'Nilai Formatif';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
 
         $guru = Guru::where('user_id', Auth::user()->id)->first();
@@ -75,14 +75,14 @@ class NilaiPengetahuanController extends Controller
             if ($count_kd_nilai == 0) {
                 $data_rencana_penilaian = K13RencanaNilaiPengetahuan::where('pembelajaran_id', $request->pembelajaran_id)->where('kode_penilaian', $kode_penilaian)->get();
                 $count_kd = count($data_rencana_penilaian);
-                $title = 'Input Nilai Pengetahuan';
+                $title = 'Input Nilai Formatif';
                 return view('guru.k13.nilaipengetahuan.create', compact('title', 'kode_penilaian', 'pembelajaran', 'data_anggota_kelas', 'data_rencana_penilaian', 'data_kode_penilaian', 'count_kd'));
             } else {
                 foreach ($data_anggota_kelas as $anggota_kelas) {
                     $data_nilai = K13NilaiPengetahuan::where('anggota_kelas_id', $anggota_kelas->id)->whereIn('k13_rencana_nilai_pengetahuan_id', $id_data_rencana_penilaian)->get();
                     $anggota_kelas->data_nilai = $data_nilai;
                 }
-                $title = 'Edit Nilai Pengetahuan';
+                $title = 'Edit Nilai Formatif';
                 return view('guru.k13.nilaipengetahuan.edit', compact('title', 'kode_penilaian', 'pembelajaran', 'data_anggota_kelas', 'data_kode_penilaian', 'count_kd_nilai', 'data_kd_nilai'));
             }
         }
@@ -118,7 +118,7 @@ class NilaiPengetahuanController extends Controller
                 $store_data_penilaian = $data_penilaian_siswa;
             }
             K13NilaiPengetahuan::insert($store_data_penilaian);
-            return redirect('guru/nilaipengetahuan')->with('toast_success', 'Data nilai pengetahuan berhasil disimpan.');
+            return redirect('guru/nilaipengetahuan')->with('toast_success', 'Data nilai formatif berhasil disimpan.');
         }
     }
 
@@ -145,7 +145,7 @@ class NilaiPengetahuanController extends Controller
                 }
             }
         }
-        return redirect('guru/nilaipengetahuan')->with('toast_success', 'Data nilai pengetahuan berhasil edit.');
+        return redirect('guru/nilaipengetahuan')->with('toast_success', 'Data nilai formatif berhasil edit.');
     }
 
     public function format_import(Request $request)

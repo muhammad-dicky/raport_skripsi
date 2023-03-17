@@ -142,7 +142,7 @@ class NilaiUtsUasController extends Controller
     {
         try {
             Excel::import(new NilaiUtsUasKTSPImport, $request->file('file_import'));
-            return back()->with('toast_success', 'Data nilai UTS UAS berhasil diimport');
+            return back()->with('toast_success', 'Data nilai SUMATIF TENGAH SEMESTER berhasil diimport');
         } catch (\Throwable $th) {
             return back()->with('toast_error', 'Maaf, format data tidak sesuai');
         }

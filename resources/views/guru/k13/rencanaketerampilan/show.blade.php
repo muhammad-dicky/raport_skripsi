@@ -13,7 +13,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item "><a href="{{ route('rencanaketerampilan.index') }}">Rencana Nilai Keterampilan</a></li>
+            <li class="breadcrumb-item "><a href="{{ route('rencanaketerampilan.index') }}">Rencana Nilai Sumatif</a></li>
             <li class="breadcrumb-item active">{{$title}}</li>
           </ol>
         </div><!-- /.col -->
@@ -48,7 +48,7 @@
                   <thead class="bg-primary">
                     <tr>
                       <th class="text-center">No</th>
-                      <th class="text-center">Kompetensi Dasar</th>
+                      <th class="text-center">Tujuan Pembelajaran</th>
                       <th class="text-center">Kode Penilaian</th>
                       <th class="text-center">Kelompok/Teknik Penilaian</th>
                     </tr>

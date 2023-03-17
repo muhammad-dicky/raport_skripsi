@@ -107,15 +107,15 @@
                             <th rowspan="2" class="text-center">No</th>
                             <th rowspan="2" class="text-center">Nama Siswa</th>
                             <th rowspan="2" class="text-center">KKTP</th>
-                            <th colspan="2" class="text-center">Pengetahuan</th>
-                            <th colspan="2" class="text-center">Keterampilan</th>
+                            <th colspan="2" class="text-center">Formatif</th>
+                            <th colspan="2" class="text-center">Sumatif</th>
                             <th class="text-center">Sikap Spiritual</th>
                             <th class="text-center">Sikap Sosial</th>
                           </tr>
                           <tr>
                             <th class="text-center">Nilai</th>
                             <th class="text-center">Predikat</th>
-                            <th class="text-center">Nilai</th>
+                            <th class="text-center">NILAI AKHIR</th>
                             <th class="text-center">Predikat</th>
                             <th class="text-center">Predikat</th>
                             <th class="text-center">Predikat</th>

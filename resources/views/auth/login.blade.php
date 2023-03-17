@@ -32,8 +32,8 @@
           <div class="mb-3" style="display:none;">
             <select class="form-control" name="kurikulum" style="width: 100%;">
               <option value="">-- Kurikulum Sekolah -- </option>
-              {{-- <option value="2013" selected="selected">Kurikulum 2013 </option> --}}
-              <option value="2006" selected="selected">Kurikulum 2006 </option>
+              <option value="2013" selected="selected">Kurikulum Merdeka </option>
+              {{-- <option value="2006" >Kurikulum Merdeka </option> --}}
             </select>
           </div>
           <div class="mb-1">

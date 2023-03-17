@@ -22,7 +22,7 @@ class RencanaNilaiPengetahuanController extends Controller
      */
     public function index()
     {
-        $title = 'Rencana Nilai Pengetahuan';
+        $title = 'Rencana Nilai Formatif';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
 
         $guru = Guru::where('user_id', Auth::user()->id)->first();
@@ -44,7 +44,7 @@ class RencanaNilaiPengetahuanController extends Controller
      */
     public function create(Request $request)
     {
-        $title = 'Tambah Rencana Nilai Pengetahuan';
+        $title = 'Tambah Rencana Nilai Formatif';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
 
         $pembelajaran = Pembelajaran::findorfail($request->pembelajaran_id);
@@ -57,7 +57,7 @@ class RencanaNilaiPengetahuanController extends Controller
         ])->orderBy('kode_kd', 'ASC')->get();
 
         if (count($data_kd) == 0) {
-            return redirect('guru/kdk13')->with('toast_error', 'Belum ditemukan data kompetensi dasar pengetahuan, silahkan tambahkan data KD.');
+            return redirect('guru/kdk13')->with('toast_error', 'Belum ditemukan data Tujuan Pembelajaran formatif, silahkan tambahkan data TP.');
         } else {
             $jumlah_penilaian = $request->jumlah_penilaian;
             return view('guru.k13.rencanapengetahuan.create', compact('title', 'pembelajaran', 'jumlah_penilaian', 'data_kd'));
@@ -89,9 +89,9 @@ class RencanaNilaiPengetahuanController extends Controller
                 $store_data_penilaian = $data_penilaian_permapel;
             }
             K13RencanaNilaiPengetahuan::insert($store_data_penilaian);
-            return redirect('guru/rencanapengetahuan')->with('toast_success', 'Rencana nilai pengetahuan berhasil disimpan.');
+            return redirect('guru/rencanapengetahuan')->with('toast_success', 'Rencana nilai formatif berhasil disimpan.');
         } catch (\Throwable $th) {
-            return back()->with('toast_error', 'Pilih minimal 1 KD pada setiap kolom penilaian.');
+            return back()->with('toast_error', 'Pilih minimal 1 TP pada setiap kolom penilaian.');
         }
     }
 
@@ -103,7 +103,7 @@ class RencanaNilaiPengetahuanController extends Controller
      */
     public function show($id)
     {
-        $title = 'Data Rencana Nilai Pengetahuan';
+        $title = 'Data Rencana Nilai Formatif';
         $pembelajaran = Pembelajaran::findorfail($id);
         $data_rencana_penilaian = K13RencanaNilaiPengetahuan::where('pembelajaran_id', $id)->orderBy('kode_penilaian', 'ASC')->orderBy('k13_kd_mapel_id', 'DESC')->get();
         return view('guru.k13.rencanapengetahuan.show', compact('title', 'pembelajaran', 'data_rencana_penilaian'));
@@ -117,7 +117,7 @@ class RencanaNilaiPengetahuanController extends Controller
      */
     public function edit(Request $request, $id)
     {
-        $title = 'Edit Rencana Nilai Pengetahuan';
+        $title = 'Edit Rencana Nilai Formatif';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
 
         $pembelajaran = Pembelajaran::findorfail($request->pembelajaran_id);
@@ -161,12 +161,12 @@ class RencanaNilaiPengetahuanController extends Controller
             try {
                 K13RencanaNilaiPengetahuan::where('pembelajaran_id', $request->pembelajaran_id)->delete();
                 K13RencanaNilaiPengetahuan::insert($store_data_penilaian);
-                return redirect('guru/rencanapengetahuan')->with('toast_success', 'Rencana nilai pengetahuan berhasil diupdate.');
+                return redirect('guru/rencanapengetahuan')->with('toast_success', 'Rencana nilai formatif berhasil diupdate.');
             } catch (\Throwable $th) {
                 return back()->with('toast_warning', 'Perencanaan penilaian tidak dapat diupdate.');
             }
         } catch (\Throwable $th) {
-            return back()->with('toast_error', 'Pilih minimal 1 KD pada setiap kolom penilaian.');
+            return back()->with('toast_error', 'Pilih minimal 1 TP pada setiap kolom penilaian.');
         }
     }
 }

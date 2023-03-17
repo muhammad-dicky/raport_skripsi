@@ -13,7 +13,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item "><a href="{{ route('rencanaketerampilan.index') }}">Rencana Nilai Keterampilan</a></li>
+            <li class="breadcrumb-item "><a href="{{ route('rencanaketerampilan.index') }}">Rencana Nilai Sumatif</a></li>
             <li class="breadcrumb-item active">{{$title}}</li>
           </ol>
         </div><!-- /.col -->
@@ -92,7 +92,7 @@
                       </tr>
 
                       <tr class="bg-primary">
-                        <th>Kompetensi Dasar</th>
+                        <th>Tujuan Pembelajaran</th>
                         @for ($i = 1; $i <= $jumlah_penilaian; $i++) <td>
                           </td>@endfor
                       </tr>
@@ -112,7 +112,7 @@
                 <div class="alert alert-warning alert-dismissible">
                   <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
                   <h5><i class="icon fas fa-exclamation-triangle"></i> Perhatian</h5>
-                  <p>Jika KD yang tampil tidak sesuai, silahkan cek dan lakukan mapping semester pada menu <a href="{{ route('kdk13.index') }}">Data Kompetensi Dasar</a></p>
+                  <p>Jika TP yang tampil tidak sesuai, silahkan cek dan lakukan mapping semester pada menu <a href="{{ route('kdk13.index') }}">Data Tujuan Pembelajaran</a></p>
                 </div>
             </div>
 

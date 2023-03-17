@@ -45,10 +45,10 @@
                       <th colspan="2" class="text-center" style="width: 100px;">Status Nilai Raport</th>
                     </tr>
                     <tr>
-                      <th class="text-center" style="width: 50px;">Tugas</th>
-                      <th class="text-center" style="width: 50px;">UH</th>
-                      <th class="text-center" style="width: 50px;">UTS</th>
-                      <th class="text-center" style="width: 50px;">UAS</th>
+                      <th class="text-center" style="width: 50px;">Formatif</th>
+                      <th class="text-center" style="width: 50px;">Sumatif</th>
+                      <th class="text-center" style="width: 50px;">STS</th>
+                      <th class="text-center" style="width: 50px;">SAS</th>
 
                       <th class="text-center" style="width: 50px;">Kirim Nilai</th>
                       <th class="text-center" style="width: 50px;">Input Deskripsi</th>

@@ -9,6 +9,7 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0 text-dark">{{$title}}</h1>
+          <h6 class="m-0 text-dark">Asesmen Sumatif bertujuan untuk mengevaluasi hasil belajar siswa pada tiap lingkup materi. Hasil asesmen sumatif digunakan untuk pengolahan nilai pada laporan hasil belajar siswa (rapor). </h6>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">

@@ -41,7 +41,7 @@
                         <th rowspan="2" class="text-center" style="width: 50px;">No</th>
                         <th rowspan="2" class="text-center" style="width: 50px;">NIS</th>
                         <th rowspan="2" class="text-center" style="width: 15%">Nama Siswa</th>
-                        <th colspan="2" class="text-center">Sikap Skpiritual</th>
+                        <th colspan="2" class="text-center">Sikap Spiritual</th>
                         <th colspan="2" class="text-center">Sikap Sosial</th>
                       </tr>
                       <tr>

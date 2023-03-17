@@ -13,7 +13,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item "><a href="{{ route('nilaipengetahuan.index') }}">Nilai Pengetahuan</a></li>
+            <li class="breadcrumb-item "><a href="{{ route('nilaipengetahuan.index') }}">Nilai Formatif</a></li>
             <li class="breadcrumb-item active">{{$title}}</li>
           </ol>
         </div><!-- /.col -->
@@ -69,7 +69,7 @@
                       <tr>
                         <th rowspan="2" class="text-center" style="width: 100px;">No</th>
                         <th rowspan="2" class="text-center">Nama Siswa</th>
-                        <th colspan="{{$count_kd}}" class="text-center">Kompetensi Dasar</th>
+                        <th colspan="{{$count_kd}}" class="text-center">Tujuan Pembelajaran</th>
                       </tr>
                       <tr>
                         @foreach($data_rencana_penilaian as $rencana_penilaian)

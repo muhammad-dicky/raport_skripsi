@@ -9,11 +9,13 @@
       <div class="row mb-2">
         <div class="col-sm-6">
           <h1 class="m-0 text-dark">{{$title}}</h1>
+          <h6 class="m-0 text-dark">Asesmen Formatif bertujuan untuk memperbaiki proses pembelajaran baik bagi guru maupun siswa. Hasil asesmen formatif tidak digunakan dalam pengolahan rapor namun sebagai bahan pertimbangan untuk membuat deskripsi pada laporan hasil belajar siswa. </h6>
         </div><!-- /.col -->
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="{{ route('dashboard') }}">Dashboard</a></li>
             <li class="breadcrumb-item active">{{$title}}</li>
+          
           </ol>
         </div><!-- /.col -->
       </div><!-- /.row -->

@@ -62,17 +62,17 @@
                     <tr>
 
                       @foreach($data_mapel_kelompok_a->sortBy('pembelajaran.mapel.k13_mapping_mapel.nomor_urut') as $mapel_kelompok_a)
-                      <th class="text-center" colspan="2">Peng</th>
-                      <th class="text-center" colspan="2">Ket</th>
+                      <th class="text-center" colspan="2">Formatif</th>
+                      <th class="text-center" colspan="2">Sumatif</th>
                       @endforeach
 
                       @foreach($data_mapel_kelompok_b->sortBy('pembelajaran.mapel.k13_mapping_mapel.nomor_urut') as $mapel_kelompok_b)
-                      <th class="text-center" colspan="2">Peng</th>
-                      <th class="text-center" colspan="2">Ket</th>
+                      <th class="text-center" colspan="2">Formatif</th>
+                      <th class="text-center" colspan="2">Sumatif</th>
                       @endforeach
 
-                      <th class="text-center">Peng</th>
-                      <th class="text-center">Ket</th>
+                      <th class="text-center">Formatif</th>
+                      <th class="text-center">Sumatif</th>
 
                       <th class="text-center">Spr</th>
                       <th class="text-center">Sos</th>

@@ -64,9 +64,9 @@
           <td colspan="3" style="width: 45%;">Nilai</td>
         </tr>
         <tr class="heading">
-          <td style="width: 15%;">Tugas</td>
-          <td style="width: 15%;">UH</td>
-          <td style="width: 15%;">UTS</td>
+          <td style="width: 15%;">Formatif</td>
+          <td style="width: 15%;">SUMATIF</td>
+          <td style="width: 15%;">STS</td>
         </tr>
 
         <!-- Nilai Mapel Wajib  -->

@@ -21,7 +21,7 @@ class KdMapelController extends Controller
      */
     public function index()
     {
-        $title = 'Data Kompetensi Dasar';
+        $title = 'Data Tujuan Pembelajaran';
         $tapel = Tapel::findorfail(session()->get('tapel_id'));
         $data_mapel = Mapel::where('tapel_id', $tapel->id)->orderBy('nama_mapel', 'ASC')->get();
         $id_mapel = Mapel::where('tapel_id', $tapel->id)->get('id');
@@ -52,7 +52,7 @@ class KdMapelController extends Controller
         if ($validator->fails()) {
             return back()->with('toast_error', $validator->messages()->all()[0])->withInput();
         } else {
-            $title = 'Tambah Kompetensi Dasar';
+            $title = 'Tambah Tujuan Pembelajaran';
             $mapel_id = $request->mapel_id;
             $tingkatan_kelas = $request->tingkatan_kelas;
 
@@ -95,7 +95,7 @@ class KdMapelController extends Controller
                 $store_data_kd[] = $data_kd;
             }
             K13KdMapel::insert($store_data_kd);
-            return redirect('admin/k13kd')->with('toast_success', 'Kompetensi dasar berhasil ditambahkan');
+            return redirect('admin/k13kd')->with('toast_success', 'Tujuan Pembelajaran berhasil ditambahkan');
         }
     }
 
@@ -122,7 +122,7 @@ class KdMapelController extends Controller
                 'ringkasan_kompetensi' => $request->ringkasan_kompetensi,
             ];
             $kd->update($data_kd);
-            return back()->with('toast_success', 'Kompetensi dasar berhasil diedit');
+            return back()->with('toast_success', 'Tujuan Pembelajaran berhasil diedit');
         }
     }
 
@@ -137,9 +137,9 @@ class KdMapelController extends Controller
         $kd = K13KdMapel::findorfail($id);
         try {
             $kd->delete();
-            return back()->with('toast_success', 'Kompetensi dasar berhasil dihapus');
+            return back()->with('toast_success', 'Tujuan Pembelajaran berhasil dihapus');
         } catch (\Throwable $th) {
-            return back()->with('toast_error', 'Data Kompetensi dasar tidak dapat dihapus');
+            return back()->with('toast_error', 'Data Tujuan Pembelajaran tidak dapat dihapus');
         }
     }
 }

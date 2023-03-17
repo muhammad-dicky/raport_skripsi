@@ -89,7 +89,7 @@
                             <td class="text-center">{{$nilai_siswa->nilai_akhir}}</td>
                             <td class="text-center">{{$nilai_siswa->predikat}}</td>
                             <td>
-                              <textarea class="form-control" name="deskripsi[]" rows="2" minlength="5" maxlength="100" required oninvalid="this.setCustomValidity('Capaian Kompetensi harus berisi antara 10 s/d 100 karekter')" oninput="setCustomValidity('')">{{$nilai_siswa->deskripsi}}</textarea>
+                              <textarea class="form-control" name="deskripsi[]" rows="2" minlength="5" maxlength="500" required oninvalid="this.setCustomValidity('Capaian Kompetensi harus berisi antara 10 s/d 500 karekter')" oninput="setCustomValidity('')">{{$nilai_siswa->deskripsi}}</textarea>
                             </td>
 
                           </tr>

@@ -102,7 +102,7 @@
         @if(Session::get('kurikulum') == '2013')
 
         <!-- Kurikulum 2013 -->
-        <li class="nav-header">SETTING RAPORT K-2013</li>
+        <li class="nav-header">SETTING RAPORT MERDEKA BELAJAR</li>
         <li class="nav-item">
           <a href="{{ route('k13mapping.index') }}" class="nav-link">
             <i class="nav-icon fas fa-list-ol"></i>
@@ -139,7 +139,7 @@
           <a href="{{ route('k13kd.index') }}" class="nav-link">
             <i class="nav-icon fas fa-clipboard-list"></i>
             <p>
-              Data Kompetensi Dasar
+              Data Tujuan Pembelajaran
             </p>
           </a>
         </li>
@@ -162,7 +162,7 @@
           </a>
         </li>
 
-        <li class="nav-header">HASIL RAPORT K-2013</li>
+        <li class="nav-header">HASIL RAPORT MERDEKA BELAJAR</li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-list-ol"></i>
@@ -240,7 +240,7 @@
 
         @elseif(Session::get('kurikulum') == '2006')
 
-        <!-- Kurikulum 2006 -->
+        <!-- Kurikulum merdeka -->
         <li class="nav-header">SETTING RAPORT MERDEKA</li>
         <li class="nav-item">
           <a href="{{ route('mapping.index') }}" class="nav-link">
@@ -274,16 +274,16 @@
             </p>
           </a>
         </li>
-        <li class="nav-item">
+        {{-- <li class="nav-item">
           <a href="{{ route('validasi.index') }}" class="nav-link">
             <i class="nav-icon fas fa-check-square"></i>
             <p>
               Validasi Data
             </p>
           </a>
-        </li>
+        </li> --}}
 
-        <li class="nav-header">HASIL RAPORT MERDEKA 2006</li>
+        <li class="nav-header">HASIL RAPORT MERDEKA</li>
         <li class="nav-item has-treeview">
           <a href="#" class="nav-link">
             <i class="nav-icon fas fa-list-ol"></i>
@@ -356,7 +356,7 @@
             </li>
           </ul>
         </li>
-        <!-- End Kurikulum 2006 -->
+        <!-- End Kurikulum merdeka -->
 
         @endif
 

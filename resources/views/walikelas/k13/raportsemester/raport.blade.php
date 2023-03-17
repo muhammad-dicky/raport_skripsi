@@ -43,7 +43,7 @@
       </table>
     </div>
 
-    <div class="content">
+    {{-- <div class="content">
       <h3><strong>PENCAPAIAN KOMPETENSI PESERTA DIDIK</strong></h3>
       <table cellspacing="0">
         <tr>
@@ -108,9 +108,9 @@
           @endif
         </tr>
       </table>
-    </div>
+    </div> --}}
 
-    <div style="padding-left:60%; padding-top:1rem; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;">
+    {{-- <div style="padding-left:60%; padding-top:1rem; font-family: 'Helvetica Neue', 'Helvetica', Helvetica, Arial, sans-serif;">
       {{$anggota_kelas->kelas->tapel->k13_tgl_raport->tempat_penerbitan}}, {{$anggota_kelas->kelas->tapel->k13_tgl_raport->tanggal_pembagian->isoFormat('D MMMM Y')}}<br>
       Wali Kelas, <br><br><br><br>
       <b><u>{{$anggota_kelas->kelas->guru->nama_lengkap}}, {{$anggota_kelas->kelas->guru->gelar}}</u></b><br>
@@ -120,10 +120,10 @@
       <i>{{$anggota_kelas->kelas->nama_kelas}} | {{$anggota_kelas->siswa->nama_lengkap}} | {{$anggota_kelas->siswa->nis}}</i> <b style="float: right;"><i>Halaman 1</i></b>
     </div>
   </div>
-  <div class="page-break"></div>
+  <div class="page-break"></div> --}}
 
-  <!-- Page 2 Pengetahuan  -->
-  <div class="invoice-box">
+  <!-- Page 2 Formatif  -->
+  {{-- <div class="invoice-box">
     <div class="header">
       <table>
         <tr>
@@ -225,9 +225,9 @@
       <i>{{$anggota_kelas->kelas->nama_kelas}} | {{$anggota_kelas->siswa->nama_lengkap}} | {{$anggota_kelas->siswa->nis}}</i> <b style="float: right;"><i>Halaman 2</i></b>
     </div>
   </div>
-  <div class="page-break"></div>
+  <div class="page-break"></div> --}}
 
-  <!-- Page 3 Keterampilan -->
+  <!-- Page 3 Sumatif -->
   <div class="invoice-box">
     <div class="header">
       <table>
@@ -268,12 +268,13 @@
           <td rowspan="2" style="width: 5%;">NO</td>
           <td rowspan="2" style="width: 23%;">Mata Pelajaran</td>
           <td rowspan="2" style="width: 7%;">KKTP</td>
-          <td colspan="3">Keterampilan</td>
+          <td colspan="3">Nilai Akhir</td>
+          {{-- <td colspan="4">Keterampilan</td> --}}
         </tr>
         <tr class="heading">
-          <td style="width: 6%;">Nilai</td>
+          <td style="width: 16%;">Nilai</td>
           <td style="width: 7%;">Predikat</td>
-          <td>Deskripsi</td>
+          <td >Deskripsi</td>
         </tr>
         <!-- Nilai A  -->
         <tr class="nilai">
@@ -290,7 +291,8 @@
           <td class="center">{{$nilai_kelompok_a->nilai_keterampilan}}</td>
           <td class="center">{{$nilai_kelompok_a->predikat_keterampilan}}</td>
           <td class="description">
-            <span>{!! nl2br($nilai_kelompok_a->k13_deskripsi_nilai_siswa->deskripsi_keterampilan) !!}</span>
+            <span>{!! nl2br($nilai_kelompok_a->k13_deskripsi_nilai_siswa->deskripsi_keterampilan ?? '') !!}</span>
+            {{-- <span>{!! nl2br($nilai_kelompok_a->k13_deskripsi_nilai_siswa->deskripsi_keterampilan) !!}</span> --}}
           </td>
         </tr>
         @endforeach
@@ -309,7 +311,8 @@
           <td class="center">{{$nilai_kelompok_b->nilai_keterampilan}}</td>
           <td class="center">{{$nilai_kelompok_b->predikat_keterampilan}}</td>
           <td class="description">
-            <span>{!! nl2br($nilai_kelompok_b->k13_deskripsi_nilai_siswa->deskripsi_keterampilan) !!}</span>
+            <span>{!! nl2br($nilai_kelompok_b->k13_deskripsi_nilai_siswa->deskripsi_keterampilan ?? '') !!}</span>
+            {{-- <span>{!! nl2br($nilai_kelompok_b->k13_deskripsi_nilai_siswa->deskripsi_keterampilan) !!}</span> --}}
           </td>
         </tr>
         @endforeach
@@ -324,7 +327,7 @@
       NIP. {{konversi_nip($anggota_kelas->kelas->guru->nip)}}
     </div>
     <div class="footer">
-      <i>{{$anggota_kelas->kelas->nama_kelas}} | {{$anggota_kelas->siswa->nama_lengkap}} | {{$anggota_kelas->siswa->nis}}</i> <b style="float: right;"><i>Halaman 3</i></b>
+      <i>{{$anggota_kelas->kelas->nama_kelas}} | {{$anggota_kelas->siswa->nama_lengkap}} | {{$anggota_kelas->siswa->nis}}</i> <b style="float: right;"><i>Halaman 1</i></b>
     </div>
   </div>
   <div class="page-break"></div>
@@ -630,7 +633,7 @@
       </table>
     </div>
     <div class="footer">
-      <i>{{$anggota_kelas->kelas->nama_kelas}} | {{$anggota_kelas->siswa->nama_lengkap}} | {{$anggota_kelas->siswa->nis}}</i> <b style="float: right;"><i>Halaman 4</i></b>
+      <i>{{$anggota_kelas->kelas->nama_kelas}} | {{$anggota_kelas->siswa->nama_lengkap}} | {{$anggota_kelas->siswa->nis}}</i> <b style="float: right;"><i>Halaman 2</i></b>
     </div>
   </div>
 </body>

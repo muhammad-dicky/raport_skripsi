@@ -53,17 +53,17 @@
 
       <tr>
         @foreach($data_mapel_kelompok_a->sortBy('pembelajaran.mapel.k13_mapping_mapel.nomor_urut') as $mapel_kelompok_a)
-        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Peng</strong></td>
-        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Ket</strong></td>
+        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>For</strong></td>
+        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Sum</strong></td>
         @endforeach
 
         @foreach($data_mapel_kelompok_b->sortBy('pembelajaran.mapel.k13_mapping_mapel.nomor_urut') as $mapel_kelompok_b)
-        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Peng</strong></td>
-        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Ket</strong></td>
+        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>For</strong></td>
+        <td align="center" colspan="2" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Sum</strong></td>
         @endforeach
 
-        <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Peng</strong></td>
-        <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Ket</strong></td>
+        <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>For</strong></td>
+        <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Sum</strong></td>
 
         <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Spr</strong></td>
         <td align="center" style="border: 1px solid #000000; background-color: #d9ecd0;"><strong>Sos</strong></td>

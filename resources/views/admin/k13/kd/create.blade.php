@@ -13,7 +13,7 @@
         <div class="col-sm-6">
           <ol class="breadcrumb float-sm-right">
             <li class="breadcrumb-item "><a href="{{ route('dashboard') }}">Dashboard</a></li>
-            <li class="breadcrumb-item "><a href="{{ route('k13kd.index') }}">Data Kompetensi Dasar</a></li>
+            <li class="breadcrumb-item "><a href="{{ route('k13kd.index') }}">Data Tujuan Pembelajaran</a></li>
             <li class="breadcrumb-item active">{{$title}}</li>
           </ol>
         </div><!-- /.col -->
@@ -72,8 +72,8 @@
                     <thead>
                       <tr>
                         <th style="width: 250px;">Jenis Kompetensi</th>
-                        <th style="width: 100px;">Kode KD</th>
-                        <th>Kompetensi Dasar</th>
+                        <th style="width: 100px;">Kode TP</th>
+                        <th>Tujuan Pembelajaran</th>
                         <th>Ringkasan Kompetensi</th>
                         <th style="width: 40px;">Baris</th>
                       </tr>

@@ -149,16 +149,16 @@
                 @endif
               </div>
               <div class="callout callout-success">
-                <h5>Kompetensi Dasar</h5>
+                <h5>Tujuan Pembelajaran</h5>
                 @if($count_data_kd == 0)
-                <span class="text-danger"><i class="icon fas fa-ban"></i> Belum ditemukan data kompetensi dasar.</span>
+                <span class="text-danger"><i class="icon fas fa-ban"></i> Belum ditemukan data Tujuan Pembelajaran.</span>
                 @else
 
                 @foreach($data_kd as $kd)
                 @if($kd->jumlah_kd_mapel == 0)
-                <span class="text-warning"><i class="icon fas fa-exclamation-triangle"></i> Belum ditemukan data Kompetensi Dasar pada mapel <b>{{$kd->nama_mapel}}</b></span><br>
+                <span class="text-warning"><i class="icon fas fa-exclamation-triangle"></i> Belum ditemukan data Tujuan Pembelajaran pada mapel <b>{{$kd->nama_mapel}}</b></span><br>
                 @else
-                <span class="text-success"><i class="icon fas fa-check"></i> Kompetensi Dasar mata pelajaran <b>{{$kd->nama_mapel}}</b> valid</span><br>
+                <span class="text-success"><i class="icon fas fa-check"></i> Tujuan Pembelajaran mata pelajaran <b>{{$kd->nama_mapel}}</b> valid</span><br>
                 @endif
                 @endforeach
                 @endif
